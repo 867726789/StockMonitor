@@ -131,7 +131,8 @@ class MonitorEngine:
         return [stock for stock in self.stocks.values() if stock.is_alerting]
 
     def get_all_stocks(self) -> List[StockItem]:
-        return list(self.stocks.values())
+        """返回按股票代码字典序排序的所有股票列表"""
+        return sorted(list(self.stocks.values()), key=lambda x: x.code)
 
     def save_config(self):
         """保存股票列表和阈值配置到本地文件"""
