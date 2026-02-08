@@ -1,7 +1,7 @@
 import sys
 from PyQt6.QtWidgets import QApplication
 from PyQt6.QtCore import QTimer
-from data_fetcher import DataFetcher
+from test_data_fetcher import TestDataFetcher
 from monitor_engine import MonitorEngine
 from gui.main_window import MainWindow
 from gui.alert_window import AlertWindow
@@ -9,7 +9,7 @@ from gui.alert_window import AlertWindow
 def main():
     app = QApplication(sys.argv)
     
-    fetcher = DataFetcher()
+    fetcher = TestDataFetcher()
     engine = MonitorEngine()
     engine.load_config()  # 加载配置文件
     

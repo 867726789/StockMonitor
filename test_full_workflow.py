@@ -2,7 +2,7 @@
 完整的端到端测试：模拟用户使用流程
 """
 from monitor_engine import MonitorEngine
-from data_fetcher import DataFetcher
+from test_data_fetcher import TestDataFetcher
 import os
 import time
 
@@ -12,7 +12,7 @@ def test_full_workflow():
     # 步骤 1: 创建引擎
     print("1. 初始化监控引擎...")
     engine = MonitorEngine("test_workflow_config.json")
-    fetcher = DataFetcher()
+    fetcher = TestDataFetcher()
     
     # 步骤 2: 添加股票
     print("\n2. 添加监控股票...")

@@ -3,7 +3,7 @@
 """
 import sys
 from PyQt6.QtWidgets import QApplication
-from data_fetcher import DataFetcher
+from test_data_fetcher import TestDataFetcher
 from monitor_engine import MonitorEngine, StockItem
 
 # 测试 StockItem 是否有新增的字段

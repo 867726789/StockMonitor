@@ -1,13 +1,12 @@
-from abc import ABC, abstractmethod
-from typing import List, Dict, Optional
+from typing import List, Dict
+from data_fetcher import DataFetcher
 
-class DataFetcher(ABC):
+class RealDataFetcher(DataFetcher):
     """
-    数据获取模块抽象基类。
-    定义了股票实时行情数据获取的标准接口。
+    真实数据获取实现类。
+    用于生产环境的真实股票数据获取。
     """
     
-    @abstractmethod
     def get_realtime_quotes(self, stock_codes: List[str]) -> List[Dict]:
         """
         获取指定股票代码列表的实时行情数据。
@@ -16,7 +15,7 @@ class DataFetcher(ABC):
             stock_codes: 股票代码列表
             
         返回:
-            包含股票行情信息的字典列表，每个字典包含:
+            包含股票行情信息的字典列表,每个字典包含:
             - code: 股票代码
             - name: 股票名称
             - price: 当前价格
@@ -26,4 +25,12 @@ class DataFetcher(ABC):
             - low: 最低价
             - amount: 成交额
         """
+        # TODO: 实现真实数据获取逻辑
         pass
+
+if __name__ == "__main__":
+    # 测试代码
+    fetcher = RealDataFetcher()
+    test_codes = ['600000', '000001']
+    data = fetcher.get_realtime_quotes(test_codes)
+    print(data)
