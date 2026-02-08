@@ -4,25 +4,7 @@
       "code": "600000",
       "name": "浦发银行",
       "thresholds": {
-        "upper_price": 10.0,
-        "lower_price": null,
-        "upper_pct": null,
-        "lower_pct": null,
-        "upper_volume": null,
-        "lower_volume": null,
-        "upper_high": null,
-        "lower_high": null,
-        "upper_low": null,
-        "lower_low": null,
-        "upper_amount": null,
-        "lower_amount": null
-      }
-    },
-    {
-      "code": "600003",
-      "name": "ST东北高",
-      "thresholds": {
-        "upper_price": 3.5,
+        "upper_price": 11.0,
         "lower_price": null,
         "upper_pct": null,
         "lower_pct": null,

@@ -11,9 +11,13 @@ def main():
     
     fetcher = DataFetcher()
     engine = MonitorEngine()
+    engine.load_config()  # 加载配置文件
     
     main_window = MainWindow(engine, fetcher)
-    alert_window = AlertWindow()
+    alert_window = AlertWindow(engine)
+    
+    # 连接 alert_window 的信号到 main_window 的刷新方法
+    alert_window.data_changed.connect(main_window.refresh_table)
     
     def refresh_data():
         stock_codes = [s.code for s in engine.get_all_stocks()]
