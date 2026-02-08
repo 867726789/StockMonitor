@@ -1,0 +1,40 @@
+{
+  "stocks": [
+    {
+      "code": "600000",
+      "name": "浦发银行",
+      "thresholds": {
+        "upper_price": 12.5,
+        "lower_price": 9.5,
+        "upper_pct": 5.0,
+        "lower_pct": -5.0,
+        "upper_volume": null,
+        "lower_volume": null,
+        "upper_high": null,
+        "lower_high": null,
+        "upper_low": null,
+        "lower_low": null,
+        "upper_amount": null,
+        "lower_amount": null
+      }
+    },
+    {
+      "code": "000001",
+      "name": "平安银行",
+      "thresholds": {
+        "upper_price": 13.0,
+        "lower_price": 10.0,
+        "upper_pct": 3.0,
+        "lower_pct": -3.0,
+        "upper_volume": null,
+        "lower_volume": null,
+        "upper_high": null,
+        "lower_high": null,
+        "upper_low": null,
+        "lower_low": null,
+        "upper_amount": null,
+        "lower_amount": null
+      }
+    }
+  ]
+}
